@@ -1,16 +1,49 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader&family=Playfair+Display:wght@700&family=Source+Sans+Pro&display=swap");
+
+@layer base {
+  h1 {
+    @apply text-5xl font-display font-semibold text-black;
+  }
+  h2 {
+    @apply text-3xl font-display font-semibold text-black;
+  }
+  body:not(h1, h2) {
+    @apply text-gray-900 text-lg md:text-xl;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer components {
+  .link-classic {
+    @apply text-blue-700 hover:underline hover:text-blue-800 transition-colors duration-200 cursor-pointer;
+  }
 }
 
-* {
-  box-sizing: border-box;
+.hero {
+  height: 20rem;
+}
+
+.hero::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(0deg, #00000070 30%, #ffffff2d 100%);
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+
+.main {
+  margin-top: 26rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 40rem;
+  }
+
+  .main {
+    margin-top: 48rem;
+  }
 }
