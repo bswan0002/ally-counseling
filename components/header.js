@@ -12,8 +12,8 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed h-auto top-0 z-10 w-full bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg py-2 shadow flex justify-center">
-        <div className="flex flex-col max-w-screen-xl w-full">
+      <div className="fixed h-auto top-0 z-10 w-full bg-gray-300 bg-opacity-100 backdrop-filter backdrop-blur-lg py-2 shadow flex justify-center">
+        <div className="flex flex-col max-w-screen-md w-full">
           <div className="flex flex-row justify-between">
             <div className="h-16 w-16 ml-3">
               <Image
