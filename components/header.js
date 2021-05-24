@@ -1,17 +1,21 @@
+// Next/React
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
+// Components
 import HeaderButton from "./headerButton";
 import NavItems from "./navItems";
+// Hooks
+import useOnClickOutside from "../hooks/useOnClickOutside";
 
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsExpanded(!isExpanded);
-  };
+  const ref = useRef();
+
+  useOnClickOutside(ref, () => setIsExpanded(false));
 
   return (
-    <>
+    <div ref={ref}>
       <div className="fixed h-auto top-0 z-10 w-full bg-gray-300 bg-opacity-100 backdrop-filter backdrop-blur-lg py-2 shadow flex justify-center">
         <div className="flex flex-col max-w-screen-md w-full">
           <div className="flex flex-row justify-between">
@@ -32,6 +36,6 @@ export default function Header() {
         </div>
       </div>
       <NavItems isExpanded={isExpanded} />
-    </>
+    </div>
   );
 }
