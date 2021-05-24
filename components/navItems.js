@@ -1,3 +1,6 @@
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function NavItems({ isExpanded }) {
   const links = [
     { "text": "Services", "route": "" },
@@ -14,11 +17,11 @@ export default function NavItems({ isExpanded }) {
       <div>
         {links.map((link) => {
           const defaultClass =
-            "px-6 py-4 flex justify-between font-sans tracking-wide border-t border-gray-300 font-bold";
+            "px-7 py-4 flex justify-between items-center font-sans tracking-wide border-t border-gray-300 font-bold";
           return (
-            <div className={defaultClass}>
+            <div className={defaultClass} key={link.text}>
               <div>{link.text}</div>
-              <div></div>
+              <FontAwesomeIcon className="h-4" icon={faChevronRight} />
             </div>
           );
         })}
