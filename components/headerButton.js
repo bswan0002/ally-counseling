@@ -15,8 +15,8 @@ export default function HeaderButton({ isExpanded, setIsExpanded }) {
     line: {
       height: "2px",
       width: "20px",
-      background: "black",
-      transition: "all 0.2s ease",
+      background: "rgb(31, 41, 55)",
+      transition: "all 0.5s ease",
     },
     lineTop: {
       transform: isExpanded ? "rotate(45deg)" : "none",
@@ -25,7 +25,6 @@ export default function HeaderButton({ isExpanded, setIsExpanded }) {
     },
     lineMiddle: {
       opacity: isExpanded ? 0 : 1,
-      transform: isExpanded ? "translateX(-16px)" : "none",
     },
     lineBottom: {
       transform: isExpanded ? "translateX(-1px) rotate(-45deg)" : "none",
