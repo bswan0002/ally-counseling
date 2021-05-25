@@ -16,41 +16,41 @@ export default function Home() {
         <h4>You deserve your best life</h4>
         <Layout>
           <p className="text-2xl font-serif mt-4 mx-2">
-            Unlock your full potential with therapy. counseling and coaching
+            Unlock your full potential with therapy. counseling, and coaching
             services with Ally Counseling.
           </p>
         </Layout>
       </div>
-      <div className="flex flex-col justify-center pt-4">
+      <div className="flex flex-col justify-center">
         <Layout>
           <h4 className="py-2 ml-4">Our Services</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 py-2">
-            <div className="bg-yellow-200 border border-yellow-200 bg-opacity-50 rounded p-2 m-1 shadow">
-              <div className="divide-y divide-yellow-500 divide-opacity-50">
+            <div className="bg-gradient-to-r from-green-100 to-blue-200 border border-blue-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
+              <div className="divide-y divide-blue-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Therapy</h3>
 
-                <p className="p-2 font-serif">
+                <p className="p-2 font-serif tracking-wide">
                   Specialized, highly effective, and evidence-based treatments
                   for anxiety, depression, obsessive compulsive disorder, PTSD,
-                  Bipolar Disorder, Autism and more.
+                  Bipolar Disorder, Autism, and more.
                 </p>
               </div>
             </div>
-            <div className="bg-blue-200 border border-blue-200 bg-opacity-50 rounded p-2 m-1 shadow">
-              <div className="divide-y divide-blue-500 divide-opacity-50">
+            <div className="bg-gradient-to-r from-blue-200 to-purple-200 border border-purple-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
+              <div className="divide-y divide-purple-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Counseling</h3>
 
-                <p className="p-2 font-serif">
+                <p className="p-2 font-serif tracking-wide">
                   Find help for specific issues like managing stress or anger,
-                  grief and loss, relationship issues and more.
+                  grief and loss, relationship issues, and more.
                 </p>
               </div>
             </div>
-            <div className="bg-green-200 border border-green-200 bg-opacity-50 rounded p-2 m-1 shadow">
-              <div className="divide-y divide-green-500 divide-opacity-50">
+            <div className="bg-gradient-to-r from-purple-200 to-red-200 border border-purple-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
+              <div className="divide-y divide-red-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Coaching</h3>
 
-                <p className="p-2 font-serif">
+                <p className="p-2 font-serif tracking-wide">
                   Get inspired, motivated, and accomplish your goals with
                   personalized coaching designed to bring out your best.
                 </p>

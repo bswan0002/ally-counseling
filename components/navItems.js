@@ -11,13 +11,13 @@ export default function NavItems({ isExpanded }) {
   return (
     <div
       className={`fixed top-20 right-1/2 translate-x-1/2 w-full max-w-screen-md transform transition-transform duration-500 ease-in-out ${
-        isExpanded ? "translate-y-0 shadow" : "-translate-y-full"
-      } bg-white`}
+        isExpanded ? "translate-y-0 shadow-lg" : "-translate-y-full"
+      } bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg`}
     >
       <div>
         {links.map((link) => {
           const defaultClass =
-            "px-7 py-4 flex cursor-pointer justify-between items-center font-sans tracking-wide border-t border-gray-300 font-bold";
+            "px-7 py-4 flex cursor-pointer justify-between items-center font-sans tracking-wide border-b border-gray-400 font-bold";
           return (
             <div className={defaultClass} key={link.text}>
               <div>{link.text}</div>

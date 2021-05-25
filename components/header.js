@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <div ref={ref} className="z-10">
-      <div className="fixed h-auto top-0 z-20 w-full bg-white backdrop-filter backdrop-blur-lg py-2 shadow flex justify-center">
+      <div className="fixed h-auto top-0 z-20 w-full bg-white bg-opacity-100 backdrop-filter backdrop-blur-lg py-2 shadow flex justify-center">
         <div className="flex flex-col max-w-screen-md w-full">
           <div className="flex flex-row justify-between">
             <div className="h-16 w-16 ml-3">
