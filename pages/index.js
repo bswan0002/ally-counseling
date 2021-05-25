@@ -29,7 +29,7 @@ export default function Home() {
               <div className="divide-y divide-blue-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Therapy</h3>
 
-                <p className="p-2 font-serif tracking-wide">
+                <p className="p-2 font-sans tracking-wide">
                   Specialized, highly effective, and evidence-based treatments
                   for anxiety, depression, obsessive compulsive disorder, PTSD,
                   Bipolar Disorder, Autism, and more.
@@ -40,7 +40,7 @@ export default function Home() {
               <div className="divide-y divide-purple-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Counseling</h3>
 
-                <p className="p-2 font-serif tracking-wide">
+                <p className="p-2 font-sans tracking-wide">
                   Find help for specific issues like managing stress or anger,
                   grief and loss, relationship issues, and more.
                 </p>
@@ -50,7 +50,7 @@ export default function Home() {
               <div className="divide-y divide-red-500 divide-opacity-50">
                 <h3 className="text-center pb-1">[i] Coaching</h3>
 
-                <p className="p-2 font-serif tracking-wide">
+                <p className="p-2 font-sans tracking-wide">
                   Get inspired, motivated, and accomplish your goals with
                   personalized coaching designed to bring out your best.
                 </p>
@@ -59,14 +59,11 @@ export default function Home() {
           </div>
         </Layout>
       </div>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 pt-4 pb-8 mt-4">
         <Layout px={2}>
-          <p className="font-serif">Serif font where hero image will go</p>
-          <p className="mt-20 font-sans">Services Section</p>
-          <p className="mt-20 font-sans">
-            Welcome to Ally Counseling (About Ally Counseling)
-          </p>
-          <p className="mt-5 font-sans">
+          <h4 className="py-2 ml-4">Welcome to Ally Counseling</h4>
+
+          <p className="my-3 font-serif tracking-wide">
             We’re a team of talented therapists dedicated to helping people
             improve their lives. Ally Counselors strongly believe that everyone
             deserves a wonderful life and is capable of reaching that goal. Life
@@ -74,9 +71,9 @@ export default function Home() {
             knowledge, skills, and determination to help you live life to the
             fullest. Whether aspiring to improve your personal life, academics,
             career, relationships, Ally Counselors help people bring out their
-            best so they can make positive and lasting changes in their lives
+            best so they can make positive and lasting changes in their lives.
           </p>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside leading-relaxed mt-4 p-3 justify-center mx-auto w-4/5 md:w-3/5 bg-white rounded-lg shadow">
             <li>Improve your wellbeing and feel better</li>
             <li>Gain the insight you need to succeed</li>
             <li>Discover your true potential</li>
@@ -88,9 +85,11 @@ export default function Home() {
             <li>Improve your interpersonal skills</li>
             <li>Develop your emotional IQ</li>
           </ul>
-          <p className="mt-20 font-sans">Ally Counselors</p>
-          <p className="mt-20 font-sans">And some font sans</p>
-          <p className="link-classic">Click here</p>
+        </Layout>
+      </div>
+      <div className="pt-4 pb-8">
+        <Layout>
+          <h4 className="py-2 ml-4">Ally Counselors</h4>
         </Layout>
       </div>
     </Main>
