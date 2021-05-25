@@ -9,6 +9,7 @@ module.exports = {
         "sans": ['"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
         "serif": ["Newsreader", ...defaultTheme.fontFamily.serif],
         "display": ["'Playfair Display'"],
+        "sans-display": ["Inter"],
       },
     },
   },
