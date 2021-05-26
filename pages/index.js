@@ -77,9 +77,34 @@ export default function Home() {
         </Layout>
       </div>
       <div className="pt-4 pb-8">
-        <Layout>
-          <h4 className="py-2 ml-4">Ally Counselors</h4>
+        <Layout px={2}>
+          <h4 className="py-2 ml-4 text-center">Ally Counselors</h4>
+
+          <p className="my-3 font-serif tracking-wide">
+            Ally Counselors are passionate about helping people who are
+            struggling with new or chronic issues that are preventing them from
+            achieving their full potential in life, academics, relationships, or
+            careers. They enjoy partnering with their clients to help them
+            discover or get back on track with the things that make them feel
+            motivated, happy, and fulfilled.
+          </p>
         </Layout>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-5 max-w-screen-lg mx-auto rounded-lg shadow-lg">
+          <div className="col-span-2 order-2 sm:order-1 flex flex-col justify-center bg-gray-100">
+            <p className="font-serif italic p-3">
+              I love seeing my clients get excited about making positive changes
+              in their lives and I appreciate the opportunity to support my
+              clients through that process.
+            </p>
+            <p className="mt-6 mb-4 px-3">
+              Brett Johnson, LMFT, Ally Counselor
+            </p>
+          </div>
+          <img
+            className="col-span-3 sm:order-2 w-full max-h-full bg-cover"
+            src={"/brett-ally.jpg"}
+          ></img>
+        </div>
       </div>
     </Main>
   );
