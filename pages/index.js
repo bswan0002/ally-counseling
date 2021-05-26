@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Main from "../components/main";
 import Layout from "../components/layout";
+import ServiceCards from "../components/serviceCards";
 
 export default function Home() {
   return (
@@ -24,54 +25,9 @@ export default function Home() {
           </p>
         </Layout>
       </div>
-      <div className="flex flex-col justify-center">
-        <Layout>
-          {/* <h4 className="py-4 ml-4">Our Services</h4> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 py-2">
-            <div className="bg-gradient-to-r from-green-100 to-blue-200 border border-blue-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
-              <div className="divide-y divide-blue-500 divide-opacity-50">
-                <h3 className="text-center align-middle pb-1">
-                  <span class="material-icons-outlined text-3xl">
-                    psychology
-                  </span>{" "}
-                  Therapy
-                </h3>
-
-                <p className="p-2 font-sans tracking-wide">
-                  Specialized, highly effective, and evidence-based treatments
-                  for anxiety, depression, obsessive compulsive disorder, PTSD,
-                  Bipolar Disorder, Autism, and more.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gradient-to-r from-blue-200 to-purple-200 border border-purple-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
-              <div className="divide-y divide-purple-500 divide-opacity-50">
-                <h3 className="text-center pb-1">
-                  <span class="material-icons-outlined">spa</span> Counseling
-                </h3>
-
-                <p className="p-2 font-sans tracking-wide">
-                  Find help for specific issues like managing stress or anger,
-                  grief and loss, relationship issues, and more.
-                </p>
-              </div>
-            </div>
-            <div className="bg-gradient-to-r from-purple-200 to-red-200 border border-purple-200 bg-opacity-50 rounded p-2 m-1 shadow-lg">
-              <div className="divide-y divide-red-500 divide-opacity-50">
-                <h3 className="text-center pb-1">
-                  <span class="material-icons-outlined">auto_graph</span>{" "}
-                  Coaching
-                </h3>
-
-                <p className="p-2 font-sans tracking-wide">
-                  Get inspired, motivated, and accomplish your goals with
-                  personalized coaching designed to bring out your best.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Layout>
-      </div>
+      <Layout>
+        <ServiceCards />
+      </Layout>
       <div className="bg-gray-100 pt-4 pb-8 mt-4">
         <Layout px={2}>
           <h4 className="py-2 ml-4">Welcome to Ally Counseling</h4>

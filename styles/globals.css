@@ -22,9 +22,33 @@
 }
 
 @layer components {
+  /* Basic */
   .link-classic {
     @apply text-blue-700 hover:underline hover:text-blue-800 transition-colors duration-200 cursor-pointer;
   }
+
+  /* Service Card */
+  .service-card {
+    @apply divide-y divide-opacity-50 bg-gradient-to-r bg-opacity-50 rounded p-2 m-1 shadow-lg;
+  }
+
+  .service-card-green {
+    @apply divide-blue-500 from-green-100 to-blue-200 border border-blue-200;
+  }
+
+  .service-card-purple {
+    @apply divide-purple-500 from-blue-200 to-purple-200 border border-purple-200;
+  }
+
+  .service-card-red {
+    @apply divide-red-500 from-purple-200 to-red-200 border border-purple-200;
+  }
+
+  .service-card-body {
+    @apply p-2 font-sans tracking-wide;
+  }
+
+  /* Section Name */
 }
 
 .hero {
@@ -40,7 +64,10 @@
   content: "";
 }
 
-/* .hero::after {
+/* 
+Dark gray effect for spotify type effect
+Not as nice with the colorful service-cards
+.hero::after {
   display: block;
   position: relative;
   background-image: linear-gradient(0deg, #00000070 30%, #ffffff2d 100%);
