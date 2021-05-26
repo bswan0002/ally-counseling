@@ -30,7 +30,7 @@ export default function Home() {
       </Layout>
       <div className="bg-gray-100 pt-4 pb-8 mt-4">
         <Layout px={2}>
-          <h4 className="py-2 ml-4">Welcome to Ally Counseling</h4>
+          <h4 className="py-2 ml-4 text-center">Welcome to Ally Counseling</h4>
 
           <p className="my-3 font-serif tracking-wide">
             We’re a team of talented therapists dedicated to helping people
@@ -42,18 +42,38 @@ export default function Home() {
             career, relationships, Ally Counselors help people bring out their
             best so they can make positive and lasting changes in their lives.
           </p>
-          <ul className="list-disc list-inside leading-relaxed mt-4 p-3 justify-center mx-auto w-4/5 md:w-3/5 bg-white rounded-lg shadow">
-            <li>Improve your wellbeing and feel better</li>
-            <li>Gain the insight you need to succeed</li>
-            <li>Discover your true potential</li>
-            <li>Learn the science behind wellbeing</li>
-            <li>Let go of the things that are holding you back</li>
-            <li>Tackle depression and anxiety</li>
-            <li>Find balance in your life</li>
-            <li>Learn Mindfulness for wellness and performance</li>
-            <li>Improve your interpersonal skills</li>
-            <li>Develop your emotional IQ</li>
-          </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center">
+            <div
+              className="bg-cover h-80 m-2 p-2 max-w-sm  flex flex-col rounded-lg shadow-lg"
+              style={{ "backgroundImage": "url(/improve-wellbeing.jpg)" }}
+            >
+              <h3 className="text-center flex-grow px-14">Improve Wellbeing</h3>
+            </div>
+            <div
+              className="bg-cover h-80 m-2 p-2 max-w-sm  flex flex-col rounded-lg shadow-lg"
+              style={{ "backgroundImage": "url(/tackle-depression.jpg)" }}
+            >
+              <h3 className="text-center flex-grow px-10">
+                Tackle Depression and Anxiety
+              </h3>
+            </div>
+            <div
+              className="bg-cover h-80 m-2 p-2 max-w-sm  flex flex-col rounded-lg shadow-lg"
+              style={{ "backgroundImage": "url(/find-balance.jpg)" }}
+            >
+              <h3 className="text-center flex-grow px-10">
+                Find Balance in Your Life
+              </h3>
+            </div>
+            <div
+              className="bg-cover h-80 m-2 p-2 max-w-sm  flex flex-col rounded-lg shadow-lg"
+              style={{ "backgroundImage": "url(/mindful.jpg)" }}
+            >
+              <h3 className="text-center flex-grow px-10">
+                Develop Mindfulness
+              </h3>
+            </div>
+          </div>
         </Layout>
       </div>
       <div className="pt-4 pb-8">
