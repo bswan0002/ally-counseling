@@ -118,13 +118,12 @@ export default function Home() {
       <hr className="my-6 max-w-screen-lg mx-auto" />
       <Layout>
         <div>
-          <h4 className="text-center mb-8">Our Office</h4>
-          <ul className="grid grid-cols-1 md:grid-cols-2">
-            <li>Southwest Portland Office</li>
-            <li>
-              All other Oregon locations via telehealth (video conference)
-            </li>
-          </ul>
+          <div id="office" className="relative -top-24" />
+          <h4 className="text-center mb-6">Our Office</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 px-3 leading-relaxed space-y-4 md:space-y-0">
+            <p>Southwest Portland Office</p>
+            <p>All other Oregon locations via telehealth (video conference)</p>
+          </div>
         </div>
       </Layout>
       <hr className="mt-6 mb-10 max-w-screen-lg mx-auto" />

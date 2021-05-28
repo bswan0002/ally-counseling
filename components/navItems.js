@@ -5,7 +5,7 @@ export default function NavItems({ isExpanded, setIsExpanded }) {
   const links = [
     { "text": "Services", "route": "#services" },
     { "text": "About Us", "route": "#about" },
-    { "text": "Office Locations", "route": "#contact" },
+    { "text": "Office Locations", "route": "#office" },
     { "text": "Contact Us", "route": "#contact" },
   ];
   return (
