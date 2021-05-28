@@ -18,7 +18,10 @@ export default function Home() {
         ></link>
       </Head>
       <div className="text-center px-4 py-8">
-        <h4>You deserve your best life</h4>
+        <div>
+          <div id="services" className="relative -top-24" />
+          <h4>You deserve your best life</h4>
+        </div>
         <Layout>
           <p className="text-2xl font-serif mt-4 mx-2">
             Unlock your full potential with therapy. counseling, and coaching
@@ -31,7 +34,12 @@ export default function Home() {
       </Layout>
       <div className="bg-gray-100 pt-4 pb-8 mt-4">
         <Layout px={2}>
-          <h4 className="py-2 ml-4 text-center">Welcome to Ally Counseling</h4>
+          <div>
+            <div id="about" className="relative -top-24" />
+            <h4 className="py-2 ml-4 text-center">
+              Welcome to Ally Counseling
+            </h4>
+          </div>
 
           <p className="my-3 font-serif tracking-wide">
             We’re a team of talented therapists dedicated to helping people

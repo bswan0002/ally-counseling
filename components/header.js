@@ -35,7 +35,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <NavItems isExpanded={isExpanded} />
+      <NavItems isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function NavItems({ isExpanded }) {
+export default function NavItems({ isExpanded, setIsExpanded }) {
   const links = [
-    { "text": "Services", "route": "" },
-    { "text": "About Us", "route": "" },
-    { "text": "Office Locations", "route": "" },
-    { "text": "Contact Us", "route": "" },
+    { "text": "Services", "route": "#services" },
+    { "text": "About Us", "route": "#about" },
+    { "text": "Office Locations", "route": "#contact" },
+    { "text": "Contact Us", "route": "#contact" },
   ];
   return (
     <div
@@ -19,10 +19,15 @@ export default function NavItems({ isExpanded }) {
           const defaultClass =
             "px-7 py-4 flex cursor-pointer justify-between items-center font-sans tracking-wide border-b border-gray-400 font-bold";
           return (
-            <div className={defaultClass} key={link.text}>
+            <a
+              href={link.route}
+              onClick={() => setIsExpanded(false)}
+              className={defaultClass}
+              key={link.text}
+            >
               <div>{link.text}</div>
               <FontAwesomeIcon className="h-4" icon={faChevronRight} />
-            </div>
+            </a>
           );
         })}
       </div>
