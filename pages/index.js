@@ -3,6 +3,7 @@ import Image from "next/image";
 import Main from "../components/main";
 import Layout from "../components/layout";
 import ServiceCards from "../components/serviceCards";
+import ContactForm from "../components/contactForm";
 
 export default function Home() {
   return (
@@ -102,10 +103,14 @@ export default function Home() {
           </div>
           <img
             className="col-span-3 sm:order-2 w-full max-h-full bg-cover"
-            src={"/brett-ally.jpg"}
+            src="/brett-ally.jpg"
           ></img>
         </div>
       </div>
+      <hr className="mt-6 mb-10 max-w-screen-lg mx-auto" />
+      <Layout>
+        <ContactForm />
+      </Layout>
     </Main>
   );
 }
