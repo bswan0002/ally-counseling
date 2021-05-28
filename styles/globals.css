@@ -50,7 +50,7 @@
 
   /* About Card */
   .about-card {
-    @apply bg-white m-1 bg-opacity-40 font-bold filter backdrop-blur-lg p-4 rounded-xl shadow;
+    @apply bg-white m-1 bg-opacity-20 font-bold filter backdrop-blur-lg p-4 rounded-xl shadow;
   }
 }
 
@@ -101,5 +101,23 @@ Not as nice with the colorful service-cards
 
   .main {
     margin-top: 45rem;
+  }
+}
+
+:root {
+  --gradient: linear-gradient(45deg, #ddd6fe, #fecaca, #fde68a);
+}
+.animated-gradient {
+  background-image: var(--gradient);
+  background-size: 300%;
+  animation: bg-animation 25s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
   }
 }

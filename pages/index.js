@@ -33,7 +33,7 @@ export default function Home() {
         <ServiceCards />
       </Layout>
       <hr className="my-6 max-w-screen-lg mx-auto" />
-      <div className="bg-gradient-to-br from-purple-200 to-red-200 via-pink-200 pt-4 pb-8 mt-4 shadow-lg">
+      <div className="animated-gradient pt-4 pb-8 mt-4 shadow-lg">
         <Layout px={2}>
           <div>
             <div id="about" className="relative -top-24" />
