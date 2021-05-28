@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </Layout>
       </div>
-      <div className="pt-4 pb-8">
+      <div className="pt-4 pb-10">
         <Layout px={2}>
           <h4 className="py-2 ml-4 text-center">Ally Counselors</h4>
 
@@ -115,6 +115,18 @@ export default function Home() {
           ></img>
         </div>
       </div>
+      <hr className="my-6 max-w-screen-lg mx-auto" />
+      <Layout>
+        <div>
+          <h4 className="text-center mb-8">Our Office</h4>
+          <ul className="grid grid-cols-1 md:grid-cols-2">
+            <li>Southwest Portland Office</li>
+            <li>
+              All other Oregon locations via telehealth (video conference)
+            </li>
+          </ul>
+        </div>
+      </Layout>
       <hr className="mt-6 mb-10 max-w-screen-lg mx-auto" />
       <Layout>
         <ContactForm />
