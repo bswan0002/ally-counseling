@@ -31,10 +31,10 @@ export default function ContactForm() {
           </label>
           <PhoneInput
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="(123) 456 7890"
+            placeholder="(123) 456-7890"
             country="US"
             value={phone}
-            onChange={setPhone}
+            onChange={(country) => setPhone()}
           />
         </div>
 
