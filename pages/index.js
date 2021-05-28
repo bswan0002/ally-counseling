@@ -32,7 +32,8 @@ export default function Home() {
       <Layout>
         <ServiceCards />
       </Layout>
-      <div className="bg-gray-100 pt-4 pb-8 mt-4">
+      <hr className="my-6 max-w-screen-lg mx-auto" />
+      <div className="bg-gradient-to-br from-purple-200 to-red-200 via-pink-200 pt-4 pb-8 mt-4 shadow-lg">
         <Layout px={2}>
           <div>
             <div id="about" className="relative -top-24" />
@@ -51,7 +52,7 @@ export default function Home() {
             career, relationships, Ally Counselors help people bring out their
             best so they can make positive and lasting changes in their lives.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center">
             <div
               className="bg-cover h-80 m-2 p-2 max-w-sm  flex flex-col rounded-lg shadow-lg"
               style={{ "backgroundImage": "url(/improve-wellbeing.jpg)" }}
@@ -82,9 +83,30 @@ export default function Home() {
                 Develop Mindfulness
               </h3>
             </div>
+          </div> */}
+          <div className="flex flex-row flex-wrap md:justify-center">
+            <div className="about-card">
+              Improve your wellbeing and feel better
+            </div>
+            <div className="about-card">
+              Gain the insight you need to succeed
+            </div>
+            <div className="about-card">Discover your true potential</div>
+            <div className="about-card">Learn the science behind wellbeing</div>
+            <div className="about-card">
+              Let go of the things that are holding you back
+            </div>
+            <div className="about-card">Tackle depression and anxiety</div>
+            <div className="about-card">Find balance in your life</div>
+            <div className="about-card">
+              Learn mindfulness for wellness and performance
+            </div>
+            <div className="about-card">Improve your interpersonal skills</div>
+            <div className="about-card">Develop your emotional IQ</div>
           </div>
         </Layout>
       </div>
+      <hr className="mt-6 max-w-screen-lg mx-auto" />
       <div className="pt-4 pb-10">
         <Layout px={2}>
           <h4 className="py-2 ml-4 text-center">Ally Counselors</h4>

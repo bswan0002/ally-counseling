@@ -16,13 +16,12 @@ export default function ContactForm() {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            for="name"
+            htmlFor="name"
           >
             Name
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
-            id="name"
             type="text"
             placeholder="Your name here"
             value={nameInput}
@@ -32,7 +31,7 @@ export default function ContactForm() {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            for="phone"
+            htmlFor="phone"
           >
             Phone number
           </label>
@@ -47,15 +46,15 @@ export default function ContactForm() {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            for="email"
+            htmlFor="email"
           >
             Email
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
-            id="email"
             type="text"
             placeholder="example@email.com"
+            htmlFor="email"
             value={emailInput}
             onChange={(e) => setEmailInput(e.target.value)}
           />
@@ -67,6 +66,7 @@ export default function ContactForm() {
               className="shadow form-textarea mt-1 block w-full border rounded py-2 px-3 text-gray-700 focus:outline-none focus:ring"
               rows="5"
               placeholder="What should we know about you?"
+              htmlFor="message"
               value={messageInput}
               onChange={(e) => setMessageInput(e.target.value)}
             ></textarea>
