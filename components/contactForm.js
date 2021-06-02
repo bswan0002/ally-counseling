@@ -65,9 +65,7 @@ const ContactForm = React.forwardRef((props, ref) => {
       {showSuccess && (
         <ContactSuccessModal show={showSuccess} setShow={setShowSuccess} />
       )}
-      <h4 id="contact" className="ml-4 pb-2">
-        Contact Us
-      </h4>
+      <h4 className="ml-4 pb-2">Contact Us</h4>
       <form className="bg-gray-100 grid grid-cols-1 md:grid-cols-2 gap-x-4 p-4 mt-4 shadow rounded-xl">
         <div className="mb-4">
           <label

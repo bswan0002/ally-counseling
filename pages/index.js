@@ -154,6 +154,7 @@ export default function Home() {
       </Layout>
       <hr className="mt-6 mb-10 max-w-screen-lg mx-auto" />
       <Layout>
+        <div id="contact" className="relative -top-24" />
         <ContactForm ref={contactRef} />
       </Layout>
     </Main>
