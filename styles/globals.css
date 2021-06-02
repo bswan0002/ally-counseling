@@ -110,7 +110,7 @@ Not as nice with the colorful service-cards
 .animated-gradient {
   background-image: var(--gradient);
   background-size: 300%;
-  animation: bg-animation 25s infinite alternate;
+  animation: bg-animation 20s infinite alternate;
 }
 
 @keyframes bg-animation {

@@ -1,14 +1,64 @@
+// Libraries
 import { useState } from "react";
 import PhoneInput from "react-phone-number-input/input";
+// Components
+import ContactSuccessModal from "./contactSuccessModal";
 
 export default function ContactForm() {
-  const [nameInput, setNameInput] = useState();
+  const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState();
-  const [emailInput, setEmailInput] = useState();
-  const [messageInput, setMessageInput] = useState();
+  const [emailInput, setEmailInput] = useState("");
+  const [messageInput, setMessageInput] = useState("");
+
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubmit = () => {
+    setShowSuccess(true);
+    return null;
+    if (nameInput.length === 0) {
+      alert("Please enter your name.");
+      return null;
+    }
+    if (phoneInput === undefined) {
+      alert("Please enter your phone number.");
+      return null;
+    }
+    if (emailInput.length === 0) {
+      alert("Please enter your email.");
+      return null;
+    }
+
+    const date = new Date();
+    const postBody = {
+      "Name": nameInput,
+      "Phone": phoneInput,
+      "Email": emailInput,
+      "Message": messageInput,
+      "Created at": date,
+    };
+
+    fetch(`${process.env.NEXT_PUBLIC_SHEET_URL}`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(postBody),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
+      {showSuccess && (
+        <ContactSuccessModal show={showSuccess} setShow={setShowSuccess} />
+      )}
       <h4 id="contact" className="ml-4 pb-2">
         Contact Us
       </h4>
@@ -76,6 +126,7 @@ export default function ContactForm() {
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:ring"
             type="button"
+            onClick={handleSubmit}
           >
             Submit
           </button>
