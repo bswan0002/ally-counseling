@@ -1,3 +1,6 @@
+// Libraries
+import { useRef } from "react";
+// Components
 import Head from "next/head";
 import Image from "next/image";
 import Main from "../components/main";
@@ -6,6 +9,7 @@ import ServiceCards from "../components/serviceCards";
 import ContactForm from "../components/contactForm";
 
 export default function Home() {
+  const contactRef = useRef();
   return (
     <Main>
       <Head>
@@ -150,7 +154,7 @@ export default function Home() {
       </Layout>
       <hr className="mt-6 mb-10 max-w-screen-lg mx-auto" />
       <Layout>
-        <ContactForm />
+        <ContactForm ref={contactRef} />
       </Layout>
     </Main>
   );
