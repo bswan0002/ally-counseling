@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <Layout>
           <p className="text-2xl font-serif mt-4 mx-2">
-            Unlock your full potential with therapy. counseling, and coaching
+            Unlock your full potential with therapy, counseling, and coaching
             services with Ally Counseling.
           </p>
         </Layout>
