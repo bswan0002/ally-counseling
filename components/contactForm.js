@@ -11,10 +11,9 @@ export default function ContactForm() {
   const [messageInput, setMessageInput] = useState("");
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
-    setShowSuccess(true);
-    return null;
     if (nameInput.length === 0) {
       alert("Please enter your name.");
       return null;
@@ -48,6 +47,8 @@ export default function ContactForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setSubmitted(true);
+        setShowSuccess(true);
       })
       .catch((error) => {
         console.log(error);
@@ -71,6 +72,7 @@ export default function ContactForm() {
             Name
           </label>
           <input
+            disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
             placeholder="Your name here"
@@ -86,6 +88,7 @@ export default function ContactForm() {
             Phone number
           </label>
           <PhoneInput
+            disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             placeholder="(123) 456 7890"
             country="US"
@@ -101,6 +104,7 @@ export default function ContactForm() {
             Email
           </label>
           <input
+            disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
             placeholder="example@email.com"
@@ -113,6 +117,7 @@ export default function ContactForm() {
           <label className="block text-gray-700 text-sm font-bold mb-2">
             Message
             <textarea
+              disabled={submitted}
               className="shadow form-textarea mt-1 block w-full border rounded py-2 px-3 text-gray-700 focus:outline-none focus:ring"
               rows="5"
               placeholder="What should we know about you?"
@@ -124,11 +129,14 @@ export default function ContactForm() {
         </div>
         <div className="flex items-center justify-between">
           <button
+            disabled={submitted}
             className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:ring"
+            className={`text-white py-2 px-4 rounded focus:outline-none focus:ring
+              ${submitted ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-700"}`}
             type="button"
             onClick={handleSubmit}
           >
-            Submit
+            {submitted ? "Submitted" : "Submit"}
           </button>
         </div>
       </form>
