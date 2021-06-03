@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-number-input/input";
 // Components
 import ContactSuccessModal from "./contactSuccessModal";
 
-const ContactForm = React.forwardRef((props, ref) => {
+const ContactForm = () => {
   const [nameInput, setNameInput] = useState("");
   const [phoneInput, setPhoneInput] = useState();
   const [emailInput, setEmailInput] = useState("");
@@ -75,7 +75,6 @@ const ContactForm = React.forwardRef((props, ref) => {
             Name
           </label>
           <input
-            ref={ref}
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
@@ -150,6 +149,6 @@ const ContactForm = React.forwardRef((props, ref) => {
       </form>
     </>
   );
-});
+};
 
 export default ContactForm;
