@@ -139,7 +139,7 @@ const ContactForm = React.forwardRef((props, ref) => {
               ${
                 submitted
                   ? "bg-gray-400 cursor-default"
-                  : "bg-blue-500 hover:bg-blue-700"
+                  : "bg-blue-600 hover:bg-blue-700"
               }`}
             type="button"
             onClick={handleSubmit}
