@@ -1,7 +1,11 @@
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function NavItems({ isExpanded, setIsExpanded }) {
+export default function NavItems({
+  isExpanded,
+  setIsExpanded,
+  navItemsVisible,
+}) {
   const links = [
     { "text": "Services", "route": "#services" },
     { "text": "About Us", "route": "#about" },
@@ -12,6 +16,8 @@ export default function NavItems({ isExpanded, setIsExpanded }) {
     <div
       className={`fixed top-20 right-1/2 translate-x-1/2 w-full max-w-screen-md transform transition-transform duration-500 ease-in-out ${
         isExpanded ? "translate-y-0 shadow-lg" : "-translate-y-full"
+      } ${
+        !navItemsVisible && "invisible"
       } bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg`}
     >
       <div>

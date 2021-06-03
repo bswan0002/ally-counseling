@@ -39,9 +39,11 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {navItemsVisible && (
-        <NavItems isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-      )}
+      <NavItems
+        isExpanded={isExpanded}
+        setIsExpanded={setIsExpanded}
+        navItemsVisible={navItemsVisible}
+      />
     </div>
   );
 }

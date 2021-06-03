@@ -39,7 +39,12 @@ export default function HeaderButton({
 
   const handleClick = () => {
     setNavItemsVisible(true);
-    isExpanded ? () => setIsExpanded(false) : () => setIsExpanded(true);
+
+    if (isExpanded) {
+      setIsExpanded(false);
+    } else {
+      setIsExpanded(true);
+    }
   };
 
   return (
