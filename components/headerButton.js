@@ -1,4 +1,8 @@
-export default function HeaderButton({ isExpanded, setIsExpanded }) {
+export default function HeaderButton({
+  isExpanded,
+  setIsExpanded,
+  setNavItemsVisible,
+}) {
   const styles = {
     container: {
       height: "50px",
@@ -33,13 +37,13 @@ export default function HeaderButton({ isExpanded, setIsExpanded }) {
     },
   };
 
+  const handleClick = () => {
+    setNavItemsVisible(true);
+    isExpanded ? () => setIsExpanded(false) : () => setIsExpanded(true);
+  };
+
   return (
-    <div
-      style={styles.container}
-      onClick={
-        isExpanded ? () => setIsExpanded(false) : () => setIsExpanded(true)
-      }
-    >
+    <div style={styles.container} onClick={handleClick}>
       <div style={{ ...styles.line, ...styles.lineTop }} />
       <div style={{ ...styles.line, ...styles.lineMiddle }} />
       <div style={{ ...styles.line, ...styles.lineBottom }} />

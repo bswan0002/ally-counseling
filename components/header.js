@@ -9,6 +9,9 @@ import useOnClickOutside from "../hooks/useOnClickOutside";
 
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
+  // initialize nav items invisible to fix weird bug where
+  // nav items float across screen on initial page load
+  const [navItemsVisible, setNavItemsVisible] = useState(false);
 
   const ref = useRef();
 
@@ -31,11 +34,14 @@ export default function Header() {
             <HeaderButton
               isExpanded={isExpanded}
               setIsExpanded={setIsExpanded}
+              setNavItemsVisible={setNavItemsVisible}
             />
           </div>
         </div>
       </div>
-      <NavItems isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      {navItemsVisible && (
+        <NavItems isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      )}
     </div>
   );
 }
