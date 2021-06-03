@@ -138,6 +138,7 @@ export default function Home() {
           <img
             className="col-span-3 sm:order-2 w-full max-h-full bg-cover"
             src="/brett-ally.jpg"
+            alt="Brett Johnson, LMFT, Ally Counselor"
           ></img>
         </div>
       </div>
