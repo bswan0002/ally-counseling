@@ -43,7 +43,7 @@ export default function HeaderButton({
   };
 
   return (
-    <div style={styles.container} onClick={handleClick}>
+    <div style={styles.container} onClick={() => handleClick()}>
       <div style={{ ...styles.line, ...styles.lineTop }} />
       <div style={{ ...styles.line, ...styles.lineMiddle }} />
       <div style={{ ...styles.line, ...styles.lineBottom }} />
