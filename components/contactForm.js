@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState } from "react";
-import PhoneInput from "react-phone-number-input/input";
+import InputMask from "react-input-mask";
 // Components
 import ContactSuccessModal from "./contactSuccessModal";
 
@@ -90,13 +90,15 @@ const ContactForm = () => {
           >
             Phone number
           </label>
-          <PhoneInput
+          <InputMask
+            name="phone"
+            type="tel"
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
-            placeholder="(123) 456 7890"
+            mask="(999) 999-9999"
             country="US"
             value={phoneInput}
-            onChange={setPhoneInput}
+            onChange={(e) => setPhoneInput(e.target.value)}
           />
         </div>
         <div className="mb-4">
