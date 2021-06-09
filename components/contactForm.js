@@ -75,6 +75,7 @@ const ContactForm = () => {
             Name
           </label>
           <input
+            id="name"
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
@@ -90,6 +91,7 @@ const ContactForm = () => {
             Phone number
           </label>
           <InputMask
+            id="phone"
             name="phone"
             type="tel"
             disabled={submitted}
@@ -111,19 +113,22 @@ const ContactForm = () => {
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
-            htmlFor="email"
+            id="email"
             value={emailInput}
             onChange={(e) => setEmailInput(e.target.value)}
           />
         </div>
         <div className="mb-4 md:col-span-2">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+          <label
+            className="block text-gray-700 text-sm font-bold mb-2"
+            htmlFor="message"
+          >
             How can we help?
             <textarea
               disabled={submitted}
               className="shadow form-textarea mt-1 block w-full border rounded py-2 px-3 text-gray-700 focus:outline-none focus:ring"
               rows="5"
-              htmlFor="message"
+              id="message"
               value={messageInput}
               onChange={(e) => setMessageInput(e.target.value)}
             ></textarea>
@@ -131,6 +136,7 @@ const ContactForm = () => {
         </div>
         <div className="flex items-center justify-between">
           <button
+            role="submit"
             disabled={submitted}
             className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:ring"
             className={`text-white py-2 px-4 rounded focus:outline-none focus:ring
