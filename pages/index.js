@@ -4,6 +4,8 @@ import Main from "../components/main";
 import Layout from "../components/layout";
 import ServiceCards from "../components/serviceCards";
 import ContactForm from "../components/contactForm";
+// Next
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -131,11 +133,16 @@ export default function Home() {
               Brett Johnson, LMFT, Ally Counselor
             </p>
           </div>
-          <img
-            className="col-span-3 sm:order-2 w-full max-h-full bg-cover"
-            src="/brett-ally.jpg"
-            alt="Brett Johnson, LMFT, Ally Counselor"
-          ></img>
+          <div className="col-span-3 sm:order-2 w-full max-h-full">
+            <Image
+              layout="responsive"
+              quality={100}
+              src="/brett-ally.jpg"
+              alt="Brett Johnson, LMFT, Ally Counselor"
+              height="2138"
+              width="2272"
+            ></Image>
+          </div>
         </div>
       </div>
       <hr className="my-6 max-w-screen-lg mx-auto" />

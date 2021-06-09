@@ -78,7 +78,6 @@ const ContactForm = () => {
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
-            placeholder="Your name here"
             value={nameInput}
             onChange={(e) => setNameInput(e.target.value)}
           />
@@ -112,7 +111,6 @@ const ContactForm = () => {
             disabled={submitted}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring"
             type="text"
-            placeholder="example@email.com"
             htmlFor="email"
             value={emailInput}
             onChange={(e) => setEmailInput(e.target.value)}
@@ -120,12 +118,11 @@ const ContactForm = () => {
         </div>
         <div className="mb-4 md:col-span-2">
           <label className="block text-gray-700 text-sm font-bold mb-2">
-            Message
+            How can we help?
             <textarea
               disabled={submitted}
               className="shadow form-textarea mt-1 block w-full border rounded py-2 px-3 text-gray-700 focus:outline-none focus:ring"
               rows="5"
-              placeholder="What should we know about you?"
               htmlFor="message"
               value={messageInput}
               onChange={(e) => setMessageInput(e.target.value)}
