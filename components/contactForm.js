@@ -136,7 +136,6 @@ const ContactForm = () => {
         </div>
         <div className="flex items-center justify-between">
           <button
-            role="submit"
             disabled={submitted}
             className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:ring"
             className={`text-white py-2 px-4 rounded focus:outline-none focus:ring
